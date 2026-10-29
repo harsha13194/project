@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+temp/repositories/*
+temp/embeddings/*
+temp/cache/*
+!temp/repositories/.gitkeep
+!temp/embeddings/.gitkeep
+!temp/cache/.gitkeep

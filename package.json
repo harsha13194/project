@@ -1,0 +1,20 @@
+{
+  "name": "ai-codebase-intelligence",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Codebase Intelligence - Monorepo Runner",
+  "scripts": {
+    "dev:backend": "cd backend && python -m uvicorn main:app --host 0.0.0.0 --port 8000",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "start": "concurrently -k -p \"[{name}]\" -n \"BACKEND,FRONTEND\" -c \"blue.bold,cyan.bold\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev": "npm start",
+    "install:all": "npm install && npm --prefix frontend install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
+
+
+
+
